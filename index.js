@@ -3,18 +3,27 @@ let secondCard = 7;
 let sum = firstCard + secondCard;
 let hasBlackjack = false;
 let isAlive = true;
-
-if (sum <= 20) {
-  console.log('Do you want to draw a new card? 🙂');
-}
-else if (sum === 21) {
-  console.log("Wohoo! You've got Blackjack! 🥳");
-  hasBlackjack = true;
-}
-else {
-  console.log("You're out of the game: 😭");
-  isAlive = false;
-}
+let message = '';
+let messageEl = document.querySelector("#message-el");
+let sumEl = document.querySelector("#sum-el");
 
 
-console.log(isAlive);
+
+
+function startGame() {
+  sumEl.textContent = `sum: ${sum}`;
+  if (sum <= 20) {
+    message = 'Do you want to draw a new card?';
+  }
+  else if (sum === 21) {
+    message = "You've got Blackjack!";
+    hasBlackjack = true;
+  }
+  else {
+    message = "You're out of the game!";
+    isAlive = false;
+  }
+  
+  messageEl.textContent = message;
+}
+

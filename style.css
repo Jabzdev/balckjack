@@ -21,12 +21,16 @@ h1 {
   font-style: italic;
 }
 
-.btn {
+button {
+  width: 350px;
   color: rgb(39, 112, 39);
   background: goldenrod;
   font-size: 40px;
-  padding: 10px 30px;
+  padding: 10px 0px;
   font-weight: bold;
   border-radius: 7px;
   border: none;
+}
+.btn {
+  margin-top: 15px;
 }
